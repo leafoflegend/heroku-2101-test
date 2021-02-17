@@ -12,7 +12,7 @@ if (process.env.DATABASE_URL) {
 }
 
 const app = express();
-const db = new Sequelize()
+const db = new Sequelize(SEQUELIZE_OPTIONS);
 
 app.get('/health', (req, res) => {
   res.send({
