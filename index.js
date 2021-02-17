@@ -14,7 +14,7 @@ app.get('/health', (req, res) => {
 });
 
 const startServer = async () => {
-  await db.authenticate();
+  await db.sync();
 
   app.listen(PORT, () => {
     console.log(`Server started on PORT:${PORT}`);
